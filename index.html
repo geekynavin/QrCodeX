@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCodeX : Generate Any QR</title>
+    <link rel="icon" type="image/png" href="qr-code.png" >
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>
+      Create Your QR code for <span>FREE</span>
+    </h1>
+    <p>Paste the link of URL of which you want to generate QR Code</p>
+    <input type="text" id="text" placeholder="Paste the URL here">
+
+    <div class="btn">
+        <button onclick="generateQRCode()">Generate QR Code</button>
+  <button onclick="downloadQRCode()">Download</button>
+    </div>
+
+      <div id="qrcode">
+       
+      </div>
+          <p class="tagline">Generated QR Code will preview here</p>
+</div>
+
+  </div>
+
+<p class="footer">
+
+ &copy; 2025 Navin Kumar | All Rights Reserved</p> 
+
+
+</main>
+
+
+
+
+<script>
+  let qr;
+
+  function generateQRCode() {
+    const container = document.getElementById("qrcode");
+    const text = document.getElementById("text").value.trim();
+
+    // Clear old QR code
+    container.innerHTML = "";
+
+    if (!text) {
+      alert("Please enter something");
+      return;
+    }
+
+    qr = new QRCode(container, {
+      text: text,
+      width: 200,
+      height: 200,
+    });
+  }
+
+  // function downloadQRCode() {
+  //   const img = document.querySelector("#qrcode img") || document.querySelector("#qrcode canvas");
+  //   if (!img) {
+  //     alert("Generate a QR code first.");
+  //     return;
+  //   }
+
+  //   let url;
+  //   if (img.tagName === "IMG") {
+  //     url = img.src;
+  //   } else {
+  //     url = img.toDataURL("image/png");
+  //   }
+
+  //   const a = document.createElement("a");
+  //   a.href = url;
+  //   a.download = "qrcode.png";
+  //   a.click();
+  // }
+
+  function downloadQRCode() {
+  const canvas = document.querySelector("#qrcode canvas");
+  const img = document.querySelector("#qrcode img");
+
+  if (canvas) {
+    // Safer approach using canvas toBlob (works on mobile too)
+    canvas.toBlob(function(blob) {
+      saveAs(blob, "qrcode.png"); // uses FileSaver.js
+    });
+  } else if (img) {
+    // Fallback for older browsers that generate <img>
+    const a = document.createElement("a");
+    a.href = img.src;
+    a.download = "qrcode.png";
+    a.click();
+  } else {
+    alert("Generate a QR code first.");
+  }
+}
+
+</script>
+
+<!-- QR Code library -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<!-- Add FileSaver.js (a small helper for downloads) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+<!-- Designed and Developed by Navin Kumar  -->
