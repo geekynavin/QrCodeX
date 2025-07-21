@@ -27,19 +27,19 @@
 
 ## 📦 Features
 
-- 🔗 Generate QR codes for any valid link
-- 👁️ Preview the QR code instantly
-- 📥 Download the QR code as an image
-- ⚡ 100% free and lightning fast
-- 🎨 Simple, clean, and responsive UI
+* 🔗 Generate QR codes for any valid link
+* 👁️ Preview the QR code instantly
+* 📥 Download the QR code as an image
+* ⚡ 100% free and lightning fast
+* 🎨 Simple, clean, and responsive UI
 
 ---
 
 ## ⚙️ Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+* HTML5
+* CSS3
+* JavaScript (Vanilla)
 
 ---
 
@@ -56,26 +56,29 @@
 ```bash
 QRCodeX/
 │
-├── index.html
-├── style.css
-├── qr-code.png (favicon)
-└── README.md
+├── index.html            # Main HTML file
+├── style.css             # Styling for the app
+├── qr-code.png           # Favicon icon
+├── home.png              # Screenshot of homepage
+├── qr-output.png         # Screenshot of generated QR
+├── README.md             # Project documentation
+└── LICENSE               # MIT License
+```
 
+---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Navin Kumar
+**Navin Kumar**
 
-💼 LinkedIn
+* [💼 LinkedIn](https://linkedin.com/in/geekynavin)
+* [🐱 GitHub](https://github.com/geekynavin)
+* [📫 Email](mailto:navin.sarni@gmail.com)
 
-🐱 GitHub
+> Designed and Developed with ❤️ by Navin Kumar.
 
-📫 Email
-
-Designed and Developed with ❤️ by Navin Kumar.
+---
 
 ## 📃 License
 
 This project is licensed under the [MIT License](./LICENSE).
-
-
