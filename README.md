@@ -60,3 +60,22 @@ QRCodeX/
 ├── style.css
 ├── qr-code.png (favicon)
 └── README.md
+
+
+👨‍💻 Author
+
+Navin Kumar
+
+💼 LinkedIn
+
+🐱 GitHub
+
+📫 Email
+
+Designed and Developed with ❤️ by Navin Kumar.
+
+## 📃 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+
