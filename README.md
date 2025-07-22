@@ -4,6 +4,7 @@
 
 ![Status](https://img.shields.io/badge/status-Live-brightgreen)
 ![Tech](https://img.shields.io/badge/built%20with-HTML%20%7C%20CSS%20%7C%20JavaScript-blue)
+![License](https://img.shields.io/badge/license-MIT%20%C2%A9%202025%20Navin-brightgreen)
 
 ---
 
